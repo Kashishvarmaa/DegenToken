@@ -1,38 +1,85 @@
-# Degen Token (ERC-20): Unlocking the Future of Gaming
-This program shows how to make one of the ERC20 token and deploy it on the Avalanche network for Degen Gaming
+# Degen Token (ERC-20): Unlocking the Future of Gaming  
 
-## Description
-This program is a contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract first imports a few contract from "https://www.openzeppelin.com/contracts" and the ERC=20 token here is initialsied with name 'Degen' and symbol 'DGN' and it also has a shop with products in it. The functions here that is 'Mint': this helps the owner to mint and send tokens this is done by connecting our metamask wallet and this transaction should be approved, 'Burn': this burns the token, 'Redeem': here the user can redeem(burn) the token in exchange for items from the shop, 'Transfer': this helps the owner to tranfer the token to other accounts with their account address.have an idea on how the contracts are transcated on snowtrace, the leading blockchain explorer, search, API and analytics platform for the Avalanche C-Chain
+This project demonstrates how to create and deploy an **ERC-20 token** on the **Avalanche network** for **Degen Gaming**. The contract includes token minting, burning, transferring, and redeeming functionalities, along with an in-game shop.  
 
-## Getting Started
+## Description  
 
-### Installing
-To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
+This Solidity contract defines an **ERC-20 token** named **Degen (DGN)** and integrates a shop where users can redeem tokens for in-game items. It is built using **OpenZeppelin** contracts and deployed on the **Avalanche C-Chain**.  
 
-Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., DegenToken.sol).
+### Key Features  
+- **Mint:** Allows the contract owner to mint and distribute tokens.  
+- **Burn:** Enables token holders to burn their tokens.  
+- **Transfer:** Users can transfer tokens to other accounts.  
+- **Redeem:** Players can exchange tokens for in-game items from the shop.  
+- **Snowtrace Integration:** Users can track transactions on **Snowtrace**, the Avalanche blockchain explorer.  
 
-To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.9" (or another compatible version), and then click on the "Compile DegenToken.sol" button.
+## Getting Started  
 
-On the otherside run the code with the below prompt in the terminal to get the account address
-```
-npx hardhat run scripts/deploy.js  —network fuji
-```
-Once the address is recieved we'll haveto verify the address, this can be done with the following command
-```
-npx hardhat verify [address]  -network fuji
-```
-The address is to be put in the add address section on remix, gives us a number of function among which we'll be minting, burning, and transfering, redeeming.
-We first have to change our remix's environment to 'Injected Provider' and procced with the transaction of minting, burning, transfering the token to other account or redeem any item from the shop 
+### Prerequisites  
+Ensure you have the following installed:  
+- **MetaMask** (for wallet integration)  
+- **Remix IDE** (for contract deployment)  
+- **Hardhat** (for local testing and deployment)  
+- **Node.js & npm** (for running scripts)  
 
-when the address of our account is pasted on snowtrace we get transaction history of the address 
+### Installation & Deployment  
 
+#### 1. Open Remix IDE  
+- Go to [Remix](https://remix.ethereum.org/).  
+- Create a new file (`DegenToken.sol`).  
+- Copy and paste the Solidity code into the file.  
 
+#### 2. Compile the Contract  
+- Click on the **Solidity Compiler** tab.  
+- Set the compiler version to **0.8.9** (or a compatible version).  
+- Click **Compile DegenToken.sol**.  
+
+#### 3. Deploy the Contract Using Hardhat  
+- Open a terminal and navigate to your project folder.  
+- Run the following command to deploy the contract on the **Fuji testnet**:  
+
+  ```sh
+  npx hardhat run scripts/deploy.js --network fuji
+  ```
+- This will return a contract address.
+
+#### 4. Verify the Contract on Snowtrace
+- Run the following command with the deployed contract address:
+  ```sh
+  npx hardhat verify [contract_address] --network fuji
+  ```
+#### 5. Interact with the Contract on Remix
+- Go to Deploy & Run Transactions in Remix.
+- Change Environment to Injected Provider (MetaMask).
+- Paste the deployed contract address in the “Add Address” section.
+- Now, you can mint, burn, transfer tokens, and redeem items from the shop.
+
+### Transaction Tracking on Snowtrace
+
+To view transaction history:
+1.	Go to Snowtrace.
+2.	Enter your wallet address in the search bar.
+3.	Track all transactions related to Degen Token.
 
 ## Authors
 
 Kashish Varma
 [@kashishvarmaa@gmail.com]
 
-
 ## License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
